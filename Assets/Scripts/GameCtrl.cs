@@ -8,7 +8,7 @@ public class GameCtrl : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		Invoke("InstantiateCharacterParent", 1f);
+//		Invoke("InstantiateCharacterParent", 1f);
 	}
 	
 	// Update is called once per frame

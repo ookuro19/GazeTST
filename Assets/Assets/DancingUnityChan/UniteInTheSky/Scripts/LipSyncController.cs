@@ -18,6 +18,9 @@ public class LipSyncController : MonoBehaviour
     void Start()
     {
         target = GameObject.Find(targetName).GetComponent<SkinnedMeshRenderer>();
+		if (target != null) {
+			Debug.Log (targetName);
+		}
     }
 
     float GetWeight(Transform tr)
