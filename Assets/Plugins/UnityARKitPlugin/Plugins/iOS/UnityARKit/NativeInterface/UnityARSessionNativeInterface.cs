@@ -425,6 +425,11 @@ namespace UnityEngine.XR.iOS {
 				return s_UnityARSessionNativeInterface;
 		}
 
+		public static ARTrackingState GetTrackingState()
+		{
+			return s_Camera.trackingState;
+		}
+
 #if UNITY_EDITOR
 		public static void SetStaticCamera(UnityARCamera scamera)
 		{

@@ -2,20 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DontDestroyOnLoad : MonoBehaviour {
+public class DontDestroy : MonoBehaviour {
 
-	private static DontDestroyOnLoad _instance;
+	private static DontDestroy _instance;
 
-	public static DontDestroyOnLoad Instance
+	public static DontDestroy Instance
 	{
 		get
 		{
 			if (!_instance) {
-				_instance = GameObject.FindObjectOfType (typeof(DontDestroyOnLoad)) as DontDestroyOnLoad;
+				_instance = GameObject.FindObjectOfType (typeof(DontDestroy)) as DontDestroy;
 				if(!_instance)
 				{
-					GameObject am = new GameObject ("DontDestroyOnLoad");
-					_instance = am.AddComponent (typeof(DontDestroyOnLoad)) as DontDestroyOnLoad;
+					GameObject am = new GameObject ("DontDestroy");
+					_instance = am.AddComponent (typeof(DontDestroy)) as DontDestroy;
 				}
 			}
 			return _instance;
