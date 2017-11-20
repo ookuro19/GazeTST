@@ -4,7 +4,4 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes:
-  - enabled: 0
-    path: Assets/Plugins/UnityARKitPlugin/Examples/FaceTracking/FaceDirectionalLightEstimate.unity
-    guid: 360fd35caee4f4e069485021a27c0b06
+  m_Scenes: []

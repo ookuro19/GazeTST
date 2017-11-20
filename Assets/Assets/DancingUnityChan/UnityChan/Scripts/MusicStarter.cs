@@ -21,6 +21,7 @@ namespace UnityChan
 		
 		// Mecanimアニメーションイベントとして指定するOnCallMusicPlay
 		public void OnCallMusicPlay(string str){
+			Debug.Log ("OnCallMusicPlay");
 			// 文字列playを指定で再生開始
 			if(str == "play")
                 if (refAudioSource) refAudioSource.Play();
