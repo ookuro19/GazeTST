@@ -27,10 +27,10 @@ public static class GlobalForChangeScene {
 		private set { _IsPositionAssigned = value; }
 	}
 
-	public static void SetGlobalPosition(Transform tTransform)
+	public static void SetGlobalPosition(Vector3 tPosition, Quaternion tRotation)
 	{
 		IsPositionAssigned = true;
-		globalPosition = tTransform.position;
-		globalRotation = tTransform.rotation;
+		globalPosition = tPosition;
+		globalRotation = tRotation;
 	}
 }
