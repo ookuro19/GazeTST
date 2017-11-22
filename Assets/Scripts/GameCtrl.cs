@@ -5,10 +5,12 @@ using UnityEngine;
 public class GameCtrl : MonoBehaviour {
 
 	public GameObject CharacterParent;
-
+	Animator anima;
 	// Use this for initialization
 	void Start () {
-//		Invoke("InstantiateCharacterParent", 1f);
+		anima = CharacterParent.GetComponent<Animator> ();
+		anima.SetBool ("Start", false);
+
 	}
 	
 	// Update is called once per frame
@@ -16,8 +18,9 @@ public class GameCtrl : MonoBehaviour {
 		
 	}
 
-	void InstantiateCharacterParent()
+	public void StartDancing()
 	{
-		Instantiate (CharacterParent, Vector3.forward * 3f, Quaternion.identity);
+		anima.SetBool ("Start", true);
 	}
+
 }

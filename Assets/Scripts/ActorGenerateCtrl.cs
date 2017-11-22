@@ -22,6 +22,7 @@ public class ActorGenerateCtrl : MonoBehaviour
 	private Quaternion targetRotation;
 	private Ray ray;
 	private RaycastHit hitInfo;
+	private bool IsActorExist = false;
 
 	void Start()
 	{
@@ -31,11 +32,13 @@ public class ActorGenerateCtrl : MonoBehaviour
 
 	void Update()
 	{
-		#if UNITY_EDITOR
-		PlaceWithClick();
-		#else
-		PlaceWithTouch();
-		#endif
+		if (!IsActorExist) {
+			#if UNITY_EDITOR
+			PlaceWithClick();
+			#else
+			PlaceWithTouch();
+			#endif
+		}
 	}
 
 	public void SetGlobalPosition()
@@ -93,6 +96,7 @@ public class ActorGenerateCtrl : MonoBehaviour
 
 	void HitSceneGenerator(Vector3 tPosition, Quaternion tRotation)
 	{
+		IsActorExist = true;
 		// Instantiate the prefabs.
 		objectsNeedsActivation = new GameObject[prefabsNeedsActivation.Length];
 		for (var i = 0; i < prefabsNeedsActivation.Length; i++)
