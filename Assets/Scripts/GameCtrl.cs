@@ -23,4 +23,9 @@ public class GameCtrl : MonoBehaviour {
 		anima.SetBool ("Start", true);
 	}
 
+	public void StopDance()
+	{
+		anima.SetBool ("Start", false);
+	}
+
 }
